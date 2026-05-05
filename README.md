@@ -1,33 +1,36 @@
-# Project Hub
+# Project Evaluation System (Django)
 
-Minimal Django project for student mini project workflow.
+## Overview
+A Django-based web application for managing and evaluating student projects with a role-based workflow.
 
-## Setup
+## Problem
+Manual project evaluation is inefficient and lacks transparency across roles (Admin, Coordinator, Guide, Student).
 
-1. Create and activate a Python virtual environment.
-2. Install dependencies:
+## Solution
+Built a centralized system with role-based access and multi-stage evaluation tracking.
 
-   - `pip install django`
+## Key Features
+- Role-based authentication (Admin, Coordinator, Guide, Student)
+- Project group creation and management
+- Guide allocation system
+- Multi-stage evaluation workflow:
+  - Zeroth Evaluation: Guide + any one coordinator
+  - First/Second Evaluation: Guide + both coordinators
+- Dynamic status updates based on evaluator submissions
 
-3. Run migrations:
+## Tech Stack
+- Backend: Django (Python)
+- Database: MySQL
+- Frontend: HTML, CSS, JavaScript
 
-   - `python manage.py migrate`
+## Key Learnings
+- Designed multi-user workflows with conditional logic
+- Fixed data-model issues by restructuring evaluator handling
+- Improved query efficiency and debugging practices
 
-4. Create users:
-
-   - `python manage.py createsuperuser`
-
-5. Set user roles in Django shell:
-
-   - `python manage.py shell`
-   - `from django.contrib.auth.models import User`
-   - `from core.models import UserProfile`
-   - `u = User.objects.get(username="<username>")`
-   - `u.userprofile.role = "guide"  # or "student"`
-   - `u.userprofile.save()`
-
-6. Run the server:
-
-   - `python manage.py runserver`
-
-Login at `/login/`.
+## Setup Instructions
+```bash
+git clone https://github.com/yed-uoo/project-evaluation-system-django
+cd project-evaluation-system-django
+pip install -r requirements.txt
+python manage.py runserver
