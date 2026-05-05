@@ -14,6 +14,20 @@ Manual project evaluation is inefficient and lacks transparency across roles (Ad
 ## Solution
 Built a centralized system with role-based access and multi-stage evaluation tracking.
 
+## Screenshots
+
+### Admin Dashboard
+![Admin Dashboard](./screenshots/admin.png)
+
+### Student View
+![Student View](./screenshots/student.png)
+
+### Coordinator View
+![Coordinator View](./screenshots/coordinator.png)
+
+### Evaluation Page
+![Evaluation Page](./screenshots/evaluation.png)
+
 ## Key Features
 - Role-based authentication (Admin, Coordinator, Guide, Student)
 - Project group creation and management
