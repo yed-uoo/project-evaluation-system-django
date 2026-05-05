@@ -1,5 +1,10 @@
 # Project Evaluation System (Django)
 
+## Highlights
+- Built a multi-user role-based system with complex evaluation workflows
+- Designed conditional evaluation logic across multiple evaluators
+- Solved data consistency issues by restructuring database schema
+  
 ## Overview
 A Django-based web application for managing and evaluating student projects with a role-based workflow.
 
