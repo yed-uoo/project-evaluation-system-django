@@ -1,55 +1,83 @@
-# Project Evaluation System (Django)
+# ProjectHub – Role-Based Evaluation Platform
 
-## Highlights
-- Built a multi-user role-based system with complex evaluation workflows
-- Designed conditional evaluation logic across multiple evaluators
-- Solved data consistency issues by restructuring database schema
-  
-## Overview
-A Django-based web application for managing and evaluating student projects with a role-based workflow.
+🚀 **Live Demo:** https://projecthun.onrender.com
+
+A production-deployed Django web application for managing academic project evaluations through role-based workflows involving Admins, Coordinators, Guides, and Students.
 
 ## Problem
-Manual project evaluation is inefficient and lacks transparency across roles (Admin, Coordinator, Guide, Student).
+Manual academic project evaluation workflows are inefficient, error-prone, and lack transparency across stakeholders.
 
 ## Solution
-Built a centralized system with role-based access and multi-stage evaluation tracking.
+Built a centralized role-based workflow platform for project management, evaluator coordination, and multi-stage evaluation tracking.
+
+## Technical Highlights
+- Designed normalized relational database models using Django ORM
+- Implemented role-based authentication and authorization
+- Built conditional multi-stage evaluation workflows
+- Resolved evaluator workflow inconsistencies through database schema redesign
+- Optimized ORM queries using `select_related` and `prefetch_related`
+- Deployed the application to production using Render
+
+## Tech Stack
+- Python
+- Django
+- SQL
+- HTML
+- CSS
+- JavaScript
+- Render
+
+## Key Features
+- Role-based authentication (Admin, Coordinator, Guide, Student)
+- Project group creation and management
+- Guide allocation workflow
+- Multi-stage evaluation system:
+  - Zeroth Evaluation → Guide + any one coordinator
+  - First/Second Evaluation → Guide + both coordinators
+- Dynamic evaluator submission tracking
+- Attendance and report evaluation support
 
 ## Screenshots
 
 ### Admin Dashboard
 ![Admin Dashboard](./screenshots/admin.png)
 
-### Student View
-![Student View](./screenshots/student.png)
+### Student Dashboard
+![Student Dashboard](./screenshots/student.png)
 
-### Coordinator View
-![Coordinator View](./screenshots/coordinator.png)
+### Coordinator Dashboard
+![Coordinator Dashboard](./screenshots/coordinator.png)
 
-### Evaluation Page
-![Evaluation Page](./screenshots/evaluation.png)
+### Evaluation Workflow
+![Evaluation Workflow](./screenshots/evaluation.png)
 
-## Key Features
-- Role-based authentication (Admin, Coordinator, Guide, Student)
-- Project group creation and management
-- Guide allocation system
-- Multi-stage evaluation workflow:
-  - Zeroth Evaluation: Guide + any one coordinator
-  - First/Second Evaluation: Guide + both coordinators
-- Dynamic status updates based on evaluator submissions
+## Deployment
+Deployed on Render.
 
-## Tech Stack
-- Backend: Django (Python)
-- Database: MySQL
-- Frontend: HTML, CSS, JavaScript
+Production deployment considerations:
+- environment variable management
+- static file configuration
+- production Django settings
+- hosted application deployment
 
 ## Key Learnings
-- Designed multi-user workflows with conditional logic
-- Fixed data-model issues by restructuring evaluator handling
-- Improved query efficiency and debugging practices
+- Designing multi-user workflow systems
+- Backend state management and business logic handling
+- Database schema redesign for evolving requirements
+- Query optimization and debugging
+- Production deployment fundamentals
 
-## Setup Instructions
+## Local Setup
 ```bash
 git clone https://github.com/yed-uoo/project-evaluation-system-django
 cd project-evaluation-system-django
 pip install -r requirements.txt
+python manage.py migrate
 python manage.py runserver
+```
+
+## Future Improvements
+- REST API support
+- JWT authentication
+- Docker deployment
+- Improved analytics dashboard
