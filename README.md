@@ -79,5 +79,4 @@ python manage.py runserver
 ## Future Improvements
 - REST API support
 - JWT authentication
-- Docker deployment
 - Improved analytics dashboard
