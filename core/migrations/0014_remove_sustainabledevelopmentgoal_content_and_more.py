@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0013_fix_sdg_schema_compat'),
+    ('core', '0013_alter_abstract_id_alter_coordinatorapproval_id_and_more'),
     ]
 
     operations = [
